@@ -3,23 +3,35 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    axios.get('http://localhost:5500/api/backend')
-      .then(response => {
-        setMessage(response.data.message);
-      })
-      .catch(error => {
-        console.error('Error feteching data:', error);
-      });
-  }, []);
 
   return (
     <div>
-      <h1>Message from backend:
-        <p>{message}</p>
-      </h1>
+      <p>Name:</p>
+      <input type="text"/>
+      <p>Phone Number:</p>
+      <input type="text"/>
+      <p>Email Address:</p>
+      <input type="text"/>
+      <p>Stringer Name:</p>
+      <select>
+        <option>Bob</option>
+        <option>Jeff</option>
+      </select>
+      <p>Racket Model:</p>
+      <input type="text"/>
+      <p>Select String Type:</p>
+      <select>
+        <option>Aerobyte</option>
+        <option>BG 80</option>
+      </select>
+      <p>Select String Tension Horizontal:</p>
+      <input type="text"/>
+      <p>Select String Tension Horizontal:</p>
+      <input type="text"/>
+      <p>Select Racket Drop-off Date and Time:</p>
+      <p>Select Racket Drop-off Location:</p>
+      <p>Additional Notes:</p>
+      <input type="text"/>
     </div>
   );
 }
