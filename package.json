@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-calendar-datetime-picker": "^1.7.5"
+  }
+}
